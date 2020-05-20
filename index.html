@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+    <title>先给 江玲玲</title>
+    
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <style>/*Download by http://www.mycodes.net*/
+body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}#mainDiv{width:100%;height:100%}#loveHeart{float:left;width:670px;height:625px}#garden{width:100%;height:100%}#elapseClock{text-align:right;font-size:18px;margin-top:10px;margin-bottom:10px}#words{font-family:"sans-serif";width:505px;font-size:24px;color:#666}#messages{display:none}#elapseClock .digit{font-family:"digit";font-size:36px}#loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px}#code .string{color:#2a36ff}#code .keyword{color:#7f0055;font-weight:bold}#code .placeholder{margin-left:15px}#code .space{margin-left:7px}#code .comments{color:#3f7f5f}#copyright{margin-top:10px;text-align:center;width:100%;color:#666}#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}#copyright a{color:#666}</style>
+    <script type="text/javascript" src="style/jquery.js"></script>
+    <script type="text/javascript" src="style/garden.js"></script>
+    <script type="text/javascript" src="style/functions.js"></script>
+</head>
+<body class="nimbus-is-editor" style="">
+    <div id="mainDiv">
+        <div id="content" style="width: 1110px; height: 625px; margin-top: 151.5px; margin-left: 404px;">
+            <div id="code" style="margin-top: 112.5px;">
+                <span class="comments">/**</span><br>
+                
+                <span class="space"><span class="comments">* 520快乐哦! 可能我总是后知后觉 但是我想做什么 只要想到就会立马就去做 真的很爱你啊! 傻瓜 _ 玲玲<br>
+
+                    虽然不知道你的心情，但可以知道的是，夜晚的我，总在想着你的笑容 <br>   
+
+                    新的520对你的要求 嘿嘿
+                    <br>
+
+                    1、亲爱的，最近流行性感冒，你要记得提前预防啊，要好好的，可别感冒了啊。
+                    <br>
+                    <br>
+
+                    2、我给你拍照时，你要按我的要求摆pose，我要把你最美的一面拍下来。
+                    <br>
+                    <br>
+                    3、不管走了多久，我希望你一点都没有变，就像我对你的爱，走再久，也依旧！
+                    <br>
+                    <br>
+                    4、我的生命因你而丰富，你的出现使平凡的日出日落，都现出了精彩的意义。
+                    <br>
+                    <br>
+                    5、每次感到失意时，就回忆起的在特殊的地方你给我的鼓励，它们使我坚强的过下去。
+                    <br>
+                    <br>
+                    6、说的是一辈子，少一年，一个月，一天，一个时刻都不算一辈子。
+                    <br>
+                    <br>
+                    7、要开心下去 找工作要顺其自然哦, 要做自己喜欢的事情 无关其他。
+
+                </span></span></div>
+            <div id="loveHeart">
+                <canvas id="garden" width="670" height="625"></canvas>
+                <div id="words">
+                    <div id="messages">
+              江玲玲, 我会爱你一万年
+                        <div id="elapseClock" style="display:none"></div>
+                        <a href="#" id="accept">click me if accept me</a>
+                    </div>
+                    <div id="loveu">
+                        520 快乐 \(*v*)/.<br>
+                        <div class="signature">- 你的男孩 : 胡锐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <!-- 献给: <a href="javascript:alert('520 = 我爱玲')">我最可爱的人</a><br> -->
+            献给: <a href="style/520.gif">我最可爱的人</a><br>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 10000);
+            
+            $("#accept").click(function(){
+                $(this).hide();
+                $("#elapseClock").show();
+                var together = new Date();
+                timeElapse(together);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 500);
+            })
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+
+
+
+</body>
